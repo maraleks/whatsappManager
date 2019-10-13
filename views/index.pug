@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  if manager
+   p Имя: #{manager.name}
+   p Whatsapp: <a id="whatsapp" href="https://api.whatsapp.com/send?phone=#{manager.phone}">общаться</a>
+  else
+   p Менеджер не найден или неактивен  
